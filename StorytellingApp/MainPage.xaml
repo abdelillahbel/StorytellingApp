@@ -10,7 +10,7 @@
         <Style TargetType="Button">
             <Setter Property="BackgroundColor" Value="#D600AA" />
             <Setter Property="TextColor" Value="White" />
-            <Setter Property="CornerRadius" Value="30" />
+            <Setter Property="CornerRadius" Value="10" />
             <Setter Property="HeightRequest" Value="60" />
             <Setter Property="FontSize" Value="20" />
         </Style>

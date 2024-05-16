@@ -22,13 +22,16 @@
 
                 <Label Text="{Binding Story.Title}"
                        FontSize="24"
+                       FontFamily="IBMPlexSansArabicMedium" 
                        FontAttributes="Bold" />
 
                 <Label Text="{Binding Story.Subtitle}"
                        FontSize="20"
-                       FontAttributes="Italic" />
+                       FontFamily="IBMPlexSansArabicMedium" 
+                       FontAttributes="Bold" />
 
                 <Label Text="{Binding Story.Content}"
+                       FontFamily="NotoSansArabicMedium"
                        FontSize="18" />
             </StackLayout>
         </ScrollView>
