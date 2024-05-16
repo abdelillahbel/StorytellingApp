@@ -1,26 +1,51 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="StorytellingApp.ShowStoryPage"
+             BackgroundImageSource="bg1.png"
+             NavigationPage.HasNavigationBar="False"
              FlowDirection="RightToLeft">
+    
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="White" />
+        </Style>
+    </ContentPage.Resources>
 
-    <ScrollView>
-        <StackLayout Spacing="10">
-            <Image Source="{Binding Story.Image}"
-                   Aspect="AspectFill"
-                   HeightRequest="200" />
+    <AbsoluteLayout>
+        <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+            <StackLayout Padding="10">
+                <Image Source="{Binding Story.Image}"
+                       Aspect="AspectFill"
+                       HeightRequest="200" />
 
-            <Label Text="{Binding Story.Title}"
-                   FontSize="24"
-                   FontAttributes="Bold" />
+                <Label Text="{Binding Story.Title}"
+                       FontSize="24"
+                       FontAttributes="Bold" />
 
-            <Label Text="{Binding Story.Subtitle}"
-                   FontSize="18"
-                   FontAttributes="Italic" />
+                <Label Text="{Binding Story.Subtitle}"
+                       FontSize="20"
+                       FontAttributes="Italic" />
 
-            <Label Text="{Binding Story.Content}"
-                   FontSize="16" />
-        </StackLayout>
-    </ScrollView>
+                <Label Text="{Binding Story.Content}"
+                       FontSize="18" />
+            </StackLayout>
+        </ScrollView>
 
+        <Button x:Name="SpeakButton"
+                Text="Speak"
+                Margin="15,15,15,15"
+                Clicked="OnSpeakButtonClicked"
+                AbsoluteLayout.LayoutBounds="1, 0, AutoSize, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+
+        <Button x:Name="StopButton"
+                Text="Stop"
+                Margin="15,15,15,15"
+                Clicked="OnStopButtonClicked"
+                AbsoluteLayout.LayoutBounds="0, 0, AutoSize, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional" />
+    </AbsoluteLayout>
 </ContentPage>

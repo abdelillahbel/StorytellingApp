@@ -3,21 +3,28 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="StorytellingApp.StoriesPage"
+             BackgroundImageSource="bg1.png"
+             NavigationPage.HasNavigationBar="False"
              FlowDirection="RightToLeft">
+
 
     <ContentPage.Resources>
         <Style TargetType="Label">
             <Setter Property="FontSize" Value="20" />
-            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="TextColor" Value="White" />
         </Style>
     </ContentPage.Resources>
+
 
     <CollectionView x:Name="StoriesCollection"
                     ItemsLayout="VerticalList"
                     SelectionMode="None">
+
         <CollectionView.ItemTemplate>
+
             <DataTemplate>
                 <Grid Padding="10">
+                    
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="*" />
